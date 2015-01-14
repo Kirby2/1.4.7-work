@@ -18,10 +18,3 @@ axes.imshow(water_img, interpolation='none')
 
 fig.show()
 
-lightning_img.paste(water_img, (730, 950), mask=water_img)
-fig1, axes1 = plt.subplots(1, 1)
-axes1[0].imshow(lightning_img, interpolation='none')
-axes1[1].imshow(lightning_img, interpolation='none')
-axes1[1].set_xlim(500, 1500)
-axes1[1].set_ylim(1130, 850)
-fig1.show()
