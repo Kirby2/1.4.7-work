@@ -8,7 +8,14 @@ lightning_img = PIL.Image.open(student_file)
 fig, axes = plt.subplots(1, 1)
 axes.imshow(lightning_img, interpolation='none')
 
-fig.show()
+lightning = '1.jpg'
+water = '2.jpg'
+
+water = water.open(water)
+lightning = lightning.open(lightning)
+
+water.paste(water, (0, 0), water)
+water.save("result.jpg", "JPG")
 
 directory = os.path.dirname(os.path.abspath(__file__))  
 student_file = os.path.join(directory, 'water.jpg')
