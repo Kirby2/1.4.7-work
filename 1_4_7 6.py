@@ -2,9 +2,6 @@ import PIL
 import matplotlib.pyplot as plt
 import os.path              
 
-directory = os.path.dirname(os.path.abspath(__file__))  
-student_file = os.path.join(directory, 'lightning.png')
-
 water_file = os.path.join(directory, 'water.png')
 water_img = PIL.Image.open(water_file)
 water = water_img.resize((960, 540)) 
@@ -21,8 +18,8 @@ axes2[1].imshow(lightning_img)
 fig2.show()
 
 
-fig4, axes4 = plt.subplots(1,2)
+fig4, axes4 = plt.subplots(1,2) 
 axes4[0].imshow(water_img)
 axes4[1].imshow(lightning_img)
-  
+
 fig4.show()
