@@ -20,10 +20,9 @@ axes2[0].imshow(lightning_img)
 axes2[1].imshow(lightning_img)
 fig2.show()
 
-result = PIL.Image.new('RGBA', lightning_img.size, (0,0,0,0))
-result.paste(lightning_img, (0,0), mask=water)
-fig3, axes3 = plt.sublots(1,2)
-#axes3[0]. imshow(lightning_img, interpolation='none')
-axes3[1]. imshow(result, interpolation='none')
 
-fig3.show()
+fig4, axes4 = plt.subplots(1,2)
+axes4[0].imshow(water_img)
+axes4[1].imshow(lightning_img)
+  
+fig4.show()
