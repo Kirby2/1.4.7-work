@@ -19,9 +19,9 @@ rshapes, gshapes, bshapes = shapes_img.split()
 
 
 # mixes first edit
-r = ImageMath.eval("int(a/((float(b)+1)/256))", a=rjungle, b=rshapes).convert('L')
-g = ImageMath.eval("int(a/((float(b)+1)/256))", a=gjungle, b=gshapes).convert('L')
-b = ImageMath.eval("int(a/((float(b)+1)/256))", a=bjungle, b=bshapes).convert('L')
+r = ImageMath.eval("int(a/((float(b)+1)/127))", a=rjungle, b=rshapes).convert('L')
+g = ImageMath.eval("int(a/((float(b)+1)/127))", a=gjungle, b=gshapes).convert('L')
+b = ImageMath.eval("int(a/((float(b)+1)/127))", a=bjungle, b=bshapes).convert('L')
 #merges the values
 imgOut = Image.merge("RGB", (r, g, b))
 #saves the edit file
